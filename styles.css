@@ -1,0 +1,169 @@
+/* Write your CSS here! */
+:root {
+    --bodyColor: #747972;
+    --mainColor: #FDF0E9;
+    --navBarBackgroundColor:#DDAE98;
+    --unusedLightPeachColorPreviouslyNavBarBackgroundColor:#E4CDBF;
+    --navBarLinkColor:#DDAE98;
+    --navBarHoverLinkColor:#7b6257;
+    --navBarTextColor:white;
+    --otherTextColor:#20221f;
+    --nonNavBarBoxLinkColor: red;
+    --nonNavBarBoxLinkHoverColor:green;
+    --bodyFont:'Libre Baskerville';
+    --boldFont:'Oswald';
+    --accentFont:'Brittany Signature';
+  }
+
+/*the code below is from https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea*/
+#gallery {
+    line-height:0;
+    -webkit-column-count:5; /* split it into 5 columns */
+    -webkit-column-gap:5px; /* give it a 5px gap between columns */
+    -moz-column-count:5;
+    -moz-column-gap:5px;
+    column-count:5;
+    column-gap:5px;
+ }
+
+ #gallery img {
+    width: 100% !important;
+    height: auto !important;
+    margin-bottom:5px; /* to match column gap */
+    filter: grayscale(100%); /*optional*/
+    transition: filter 1s;
+ }
+
+ @media (max-width: 1200px) {
+    #gallery {
+     -moz-column-count:    4;
+     -webkit-column-count: 4;
+     column-count:         4;
+    }
+ }
+
+ @media (max-width: 1000px) {
+    #gallery {
+     -moz-column-count:    3;
+     -webkit-column-count: 3;
+     column-count:         3;
+    }
+ }
+
+ @media (max-width: 800px) {
+    #gallery {
+     -moz-column-count:    2;
+     -webkit-column-count: 2;
+     column-count:         2;
+    }
+ }
+ 
+ @media (max-width: 400px) {
+    #gallery {
+     -moz-column-count:    1;
+     -webkit-column-count: 1;
+     column-count:         1;
+    }
+ }
+
+ #gallery img:hover {
+    filter:none;
+ }
+
+
+
+ /* the code above is from https://timnwells.medium.com/create-a-simple-responsive-image-gallery-with-html-and-css-fcb973f595ea */
+  
+body{
+    background-color:var(--bodyColor);
+    margin:"8px";
+    display:"block";
+}
+
+main{
+    background-color: var(--mainColor);
+}
+
+#linkArea{
+    background-color: var(--navBarBackgroundColor);
+}
+
+#styleForMainP{
+    font-family: var(--bodyFont);
+    margin: 50px,100px;
+    color: var(--otherTextColor);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.boldCenteredHeader {
+    font-family: var(--boldFont);
+    text-align: center;
+    color: var(--otherTextColor)
+}
+
+figcaption{
+    text-align: center;
+    font-style: italic;
+    font-family: var(--bodyFont);
+}
+
+h1{
+    color: var(--navBarTextColor);
+    background-color: var(--bodyColor);
+    font-family: var(--accentFont);
+    font-weight: normal;
+}
+
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+div {
+    font-family: var(--boldFont);
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+  }
+
+a.navBar:link, a.navBar:visited {
+    background-color: var(--navBarLinkColor);
+    color:var(--navBarTextColor);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--boldFont);
+}
+
+a.navBar:hover {
+    background-color: var(--navBarHoverLinkColor);
+}
+
+
+
+a.linkBox:link, a.linkBox:visited {
+    background-color: var(--unusedLightPeachColorPreviouslyNavBarBackgroundColor);
+    color:var(--navBarTextColor);
+    padding: 15px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: var(--boldFont);
+    border-radius: 5% 
+}
+
+a.linkBox:hover {
+    background-color: var(--navBarHoverLinkColor);
+}
+
+footer{
+    color:var(--navBarTextColor);
+}
+
